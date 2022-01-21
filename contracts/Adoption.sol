@@ -1,4 +1,4 @@
-pragma solidity ^0.8.11;
+pragma solidity ^0.5.0;
 
 contract Adoption {
   address[16] public adopters;
@@ -10,5 +10,10 @@ contract Adoption {
     adopters[petId] = msg.sender;
 
     return petId;
+  }
+
+  //Retreiving the adopters
+  function getAdopters() public view returns (address[16] memory){
+    return adopters;
   }
 }
